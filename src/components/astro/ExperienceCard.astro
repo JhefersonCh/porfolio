@@ -1,0 +1,57 @@
+---
+import type { JobExperience } from '@/interfaces/interface';
+import { Briefcase, Building2, Calendar } from 'lucide-react';
+
+interface Props {
+  experience: JobExperience;
+  index: number;
+}
+
+const { experience } = Astro.props;
+const { index } = Astro.props;
+---
+
+<div
+  class={` flex  justify-start md:justify-between items-center w-full flex-row data-aos   ${
+    index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+  }`}
+  data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+  data-aos-duration="500"
+  data-aos-anchor-placement="bottom-bottom"
+>
+  <div class="order-1 md:w-5/12"></div>
+  <div
+    class="z-20 flex my-auto md:items-center order-1 bg-blue-500 shadow-xl w-8 rounded-full h-full"
+  >
+    <h1 class="mx-auto font-semibold text-lg text-white">
+      {index + 1}
+    </h1>
+  </div>
+  <div
+    class="order-1 hover:scale-105 transition-all duration-300 dark:bg-[#0a0a0a] md:ml-0 ml-[15px] bg-white rounded-lg shadow-xl md:w-5/12 w-11/12 px-6 py-4 border"
+  >
+    <div class="flex items-center mb-2">
+      <Calendar className="w-4 h-4 mr-2 text-gray-500" />
+      <p class="text-sm text-gray-500">
+        {experience.startDate} - {experience.endDate}
+      </p>
+    </div>
+    <div class="flex items-center mb-2">
+      <Building2 className="w-4 h-4 mr-2 text-gray-500" />
+      <h3 class="font-bold text-gray-800 text-xl dark:text-white/70">
+        {experience.company}
+      </h3>
+    </div>
+    <div class="flex items-center mb-3">
+      <Briefcase className="w-4 h-4 mr-2 text-gray-500" />
+      <p class="text-md font-semibold text-blue-500">
+        {experience.position}
+      </p>
+    </div>
+    <p
+      class="text-sm leading-snug tracking-wide text-gray-900 dark:text-gray-400 text-opacity-100"
+    >
+      {experience.description}
+    </p>
+  </div>
+</div>

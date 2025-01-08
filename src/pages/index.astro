@@ -1,11 +1,92 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import 'aos/dist/aos.css';
+import SectionContainer from '../components/astro/SectionContainer.astro';
+import Porjects from '../components/astro/Projects.astro';
+import Experience from '@/components/astro/Experience.astro';
+import '../assets/globals.css';
+import About from '@/components/astro/About.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Portfolio de Jheferson Checa, desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
+  description="Portfolio de Jheferson Checa,desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
+>
+  <SectionContainer class="top">
+    <h1
+      class="text-5xl font-bold mb-4 text-center mt-20"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-anchor-placement="bottom-bottom"
+    >
+      Hola, soy <span class="text-[#3034ff] dark:text-gray-400"
+        >Jheferson Checa</span
+      >
+    </h1>
+    <p
+      class="text-xl my-8 text-center"
+      data-aos="fade-up"
+      data-aos-delay="150"
+      data-aos-duration="800"
+      data-aos-anchor-placement="bottom-bottom"
+    >
+      Desarrollador <span class="text-purple-600 font-bold dark:text-blue-300"
+        >Full Stack</span
+      >, apasionado por el <span
+        class="text-blue-600 font-bold dark:text-purple-400"
+        >desarrollo web</span
+      >
+      y la tecnología.
+    </p>
+    <p
+      class="max-w-[745px] mx-auto text-center mb-8 dark:text-white/50 text-black/70 font-medium text-lg"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="300"
+      data-aos-anchor-placement="bottom-bottom"
+    >
+      Soy un estudiante de ingeniería de sistemas, apasionado por el desarrollo
+      web y la tecnología. Me encanta aprender cosas nuevas y estoy siempre
+      buscando nuevas formas de mejorar mis habilidades.
+    </p>
+    <div
+      class="flex flex-row justify-center gap-4"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="450"
+      data-aos-anchor-placement="bottom-bottom"
+    >
+      <button
+        class="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300"
+        onclick="window.location.href = '#projects'"
+      >
+        Proyectos
+      </button>
+      <button
+        class="dark:border-purple-600 border rounded flex items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white"
+        onclick="window.location.href = 'mailto:jheferson.checa@gmail.com'"
+      >
+        Contacto
+      </button>
+    </div>
+  </SectionContainer>
+
+  <SectionContainer class="mt-60" id="projects">
+    <Porjects />
+  </SectionContainer>
+
+  <SectionContainer class="mt-60" id="experience">
+    <Experience />
+  </SectionContainer>
+
+  <SectionContainer class="mt-60" id="about">
+    <About />
+  </SectionContainer>
 </Layout>
+
+<script>
+  import AOS from 'aos';
+  (function () {
+    AOS.init({});
+  })();
+</script>

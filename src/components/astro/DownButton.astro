@@ -1,0 +1,74 @@
+<button
+  id="scrollButton"
+  class="fixed z-20 right-12 bottom-12 animate-blink hover:bg-slate-600/20 rounded-full p-1 transition-all duration-300"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="size-12"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M12 5l0 14"></path><path d="M18 13l-6 6"></path><path d="M6 13l6 6"
+    ></path></svg
+  >
+</button>
+
+<script is:inline>
+  (function () {
+    window.addEventListener('DOMContentLoaded', () => {
+      const scrollButton = document.querySelector('#scrollButton');
+
+      const updateButton = () => {
+        if (
+          window.scrollY + window.innerHeight >=
+          document.body.scrollHeight - 200
+        ) {
+          scrollButton.classList.add('rotate-180');
+        } else {
+          scrollButton.classList.remove('rotate-180');
+        }
+      };
+
+      scrollButton?.addEventListener('click', function () {
+        if (
+          window.scrollY + window.innerHeight >=
+          document.body.scrollHeight - 200
+        ) {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth',
+          });
+        }
+      });
+
+      window.addEventListener('scroll', updateButton);
+
+      updateButton();
+    });
+  })();
+</script>
+<style is:inline>
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  .animate-blink {
+    animation: blink 1.5s infinite;
+  }
+</style>

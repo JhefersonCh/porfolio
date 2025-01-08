@@ -1,0 +1,56 @@
+---
+import ExperienceCard from './ExperienceCard.astro';
+import type { JobExperience } from '@/interfaces/interface';
+import { EXPERIENCES } from '@/constants/const';
+
+const experiences: JobExperience[] = EXPERIENCES;
+---
+
+<div>
+  <h1
+    class="text-4xl text-center text-purple-600 dark:text-purple-400 font-bold"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    data-aos-anchor-placement="bottom-bottom"
+  >
+    EXPERIENCIA
+  </h1>
+  <div class="container mx-auto py-8">
+    <div class="relative wrap h-full flex flex-col gap-8">
+      <div
+        class="border-2-2 absolute mb-8 border-opacity-20 dark:border-gray-500 border-gray-700 h-full border md:left-1/2 left-[15px]"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-offset="-700"
+      >
+      </div>
+      {
+        experiences.map((experience, index) => (
+          <ExperienceCard experience={experience} index={index} />
+        ))
+      }
+    </div>
+  </div>
+</div>
+<script is:inline>
+  (function init() {
+    const adjustAnimationsForMobile = () => {
+      const isMobile = window.innerWidth < 768;
+      const items = document.querySelectorAll('.data-aos');
+
+      items.forEach((item, index) => {
+        if (isMobile) {
+          item.setAttribute('data-aos', 'fade-right');
+        } else {
+          const direction = index % 2 === 0 ? 'fade-right' : 'fade-left';
+          item.setAttribute('data-aos', direction);
+        }
+      });
+    };
+
+    adjustAnimationsForMobile();
+
+    window.addEventListener('resize', adjustAnimationsForMobile);
+  })();
+</script>

@@ -1,0 +1,40 @@
+---
+import Tornado from './Tornado.astro';
+---
+
+<article>
+  <h1
+    class="text-4xl font-bold text-center text-purple-600 dark:text-purple-400 mb-12"
+  >
+    SOBRE MÍ
+  </h1>
+
+  <div class="grid grid-cols-12 gap-8 md:gap-0">
+    <section
+      class="col-span-12 md:col-span-6 lg:col-span-5 xl:col-span-4 flex justify-center md:justify-end"
+    >
+      <div class="flex justify-center items-center rounded-full size-64">
+        <Tornado />
+      </div>
+    </section>
+
+    <section class="col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8">
+      <div class="w-full flex justify-center">
+        <div class="text-pretty prose dark:prose-invert">
+          <p>
+            Hola, soy Jheferson, un entusiasta estudiante de desarrollo de
+            software que vive en Colombia. Actualmente, trabajo como
+            desarrollador, especializándome tanto en el desarrollo frontend como
+            en el backend.
+          </p>
+          <p>
+            Me considero una persona curiosa y rápida para aprender, que
+            disfruta compartir conocimientos con los demás. Tengo un enfoque
+            algo perfeccionista en mi trabajo, lo que me motiva a dar lo mejor
+            en cada proyecto.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

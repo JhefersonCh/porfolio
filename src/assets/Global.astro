@@ -1,0 +1,92 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
+    const matchMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const updateTheme = (theme: string) => {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+        html.classList.remove('light');
+      } else {
+        html.classList.add('light');
+        html.classList.remove('dark');
+      }
+      localStorage.setItem('theme', theme);
+    };
+
+    const theme = (() => {
+      if (
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('theme')
+      ) {
+        return localStorage.getItem('theme');
+      }
+      if (matchMedia.matches) {
+        return 'dark';
+      }
+      return 'light';
+    })();
+
+    if (theme === 'light') {
+      html.classList.remove('dark');
+    } else {
+      html.classList.add('dark');
+    }
+
+    window.localStorage.setItem('theme', theme!);
+
+    matchMedia.addEventListener('change', (e) => {
+      updateTheme(e.matches ? 'dark' : 'light');
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      html.classList.add('dark');
+      html.classList.remove('light');
+    } else {
+      html.classList.add('light');
+      html.classList.remove('dark');
+    }
+  });
+</script>
+
+<style is:global>
+  html.dark {
+    color: #fff;
+  }
+
+  html.dark body {
+    @apply inset-0 -z-[15] h-full w-full text-white bg-slate-950;
+  }
+
+  html.dark body::after {
+    content: '';
+    @apply fixed bottom-0 -z-[10] left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)];
+  }
+
+  html.light body {
+    @apply inset-0 -z-10 h-full w-full text-black bg-white/90 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)];
+  }
+
+  html.light body::after {
+    content: '';
+    @apply fixed bottom-0 -z-[10] left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#7b7b7b,transparent)];
+  }
+
+  (prefers-color-scheme) {
+    html.light {
+      @apply dark;
+    }
+  }
+
+  html.dark .text-color {
+    @apply text-white;
+  }
+
+  html.light .text-color {
+    @apply text-black;
+  }
+
+  .text-color:hover {
+    color: white !important;
+  }
+</style>

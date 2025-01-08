@@ -1,0 +1,30 @@
+---
+import { ProjectCard } from '@/components/react/ProjectCard';
+import { PROJECTS } from '@/constants/const';
+import type { Project } from '@/interfaces/interface';
+
+const projects: Project[] = PROJECTS;
+---
+
+<article class="text-center flex flex-col gap-4 px-4 py-8">
+  <h1
+    class="text-4xl font-semibold"
+    data-aos="fade-up"
+    data-aos-delay="150"
+    data-aos-duration="800"
+    data-aos-anchor-placement="bottom-bottom"
+  >
+    <span class="text-purple-600 dark:text-purple-400 font-bold">PROYECTOS</span
+    >
+  </h1>
+
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
+    {
+      projects.map((project) => (
+        <div>
+          <ProjectCard client:load project={project} />
+        </div>
+      ))
+    }
+  </div>
+</article>

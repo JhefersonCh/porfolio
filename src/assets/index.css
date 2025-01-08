@@ -1,0 +1,50 @@
+.transition-background {
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.animate-vibration {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease;
+}
+
+.animate-vibration:hover {
+  animation: vibration-3d 0.5s ease-in-out;
+}
+
+@keyframes vibration-3d {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+  15% {
+    transform: translate3d(-1px, 1px, 1px) scale(1);
+    filter: blur(1px);
+  }
+  30% {
+    transform: translate3d(2px, -1px, -1px) scale(0.99);
+    filter: blur(1px);
+  }
+  45% {
+    transform: translate3d(-2px, -2px, 3px) scale(1);
+    filter: blur(2.5px);
+  }
+  60% {
+    transform: translate3d(1px, 2px, -2px) scale(0.99);
+    filter: blur(1px);
+  }
+  75% {
+    transform: translate3d(-1px, 1px, 1px) scale(1);
+    filter: blur(1.5px);
+  }
+  90% {
+    transform: translate3d(1px, -1px, -1px) scale(0.99);
+    filter: blur(0.5px);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
