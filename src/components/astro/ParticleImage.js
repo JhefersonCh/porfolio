@@ -130,8 +130,6 @@ export class ParticleImage {
 
     this.disperseParticles();
     this.scene.add(this.particles);
-
-    console.log('Particles created:', positions.length / 3);
   }
 
   disperseParticles() {
@@ -221,6 +219,8 @@ export class ParticleImage {
     const material = new THREE.MeshBasicMaterial({
       map: texture,
       side: THREE.DoubleSide,
+      transparent: true,
+      alphaTest: 0.1,
     });
 
     const geometry = new THREE.PlaneGeometry(this.width, this.height);

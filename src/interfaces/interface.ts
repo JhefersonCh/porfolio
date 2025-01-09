@@ -13,4 +13,8 @@ export interface Project {
   description: string;
   link: string;
   github: string;
+  gallery: {
+    src: string;
+    alt: string;
+  }[];
 }

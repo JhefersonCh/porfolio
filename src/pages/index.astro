@@ -6,15 +6,23 @@ import Porjects from '../components/astro/Projects.astro';
 import Experience from '@/components/astro/Experience.astro';
 import '../assets/globals.css';
 import About from '@/components/astro/About.astro';
+import Tornado from '@/components/astro/Tornado.astro';
 ---
 
 <Layout
   title="Portfolio de Jheferson Checa, desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
   description="Portfolio de Jheferson Checa,desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
 >
-  <SectionContainer class="top">
+  <SectionContainer class="top mt-24">
+    <div class="flex flex-col items-center justify-center">
+      <div
+        class="flex justify-center items-center rounded-full size-44 my-6 md:my-0"
+      >
+        <Tornado />
+      </div>
+    </div>
     <h1
-      class="text-5xl font-bold mb-4 text-center mt-20"
+      class="text-5xl font-bold mb-4 text-center mt-8"
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-anchor-placement="bottom-bottom"
@@ -71,15 +79,15 @@ import About from '@/components/astro/About.astro';
     </div>
   </SectionContainer>
 
-  <SectionContainer class="mt-60" id="projects">
+  <SectionContainer class="mt-36" id="projects">
     <Porjects />
   </SectionContainer>
 
-  <SectionContainer class="mt-60" id="experience">
+  <SectionContainer class="mt-44" id="experience">
     <Experience />
   </SectionContainer>
 
-  <SectionContainer class="mt-60" id="about">
+  <SectionContainer class="mt-44" id="about">
     <About />
   </SectionContainer>
 </Layout>

@@ -21,7 +21,7 @@ const projects: Project[] = PROJECTS;
   <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
     {
       projects.map((project) => (
-        <div>
+        <div class="">
           <ProjectCard client:load project={project} />
         </div>
       ))

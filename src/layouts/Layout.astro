@@ -7,6 +7,7 @@ import { ClientRouter } from 'astro:transitions';
 import DownButton from '@/components/astro/DownButton.astro';
 import { ScrollBar } from '@/components/react/ScrollBar';
 import FluidCanva from '@/components/astro/FluidCanva.astro';
+import Footer from '@/components/astro/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
@@ -39,6 +40,7 @@ const { title, description } = Astro.props;
         <slot />
       </div>
     </div>
+    <Footer />
   </body>
 </html>
 
