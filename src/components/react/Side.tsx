@@ -17,6 +17,7 @@ const sidebarTransition = {
 interface NavItem {
   label: string;
   anchor: string;
+  newPage?: boolean;
 }
 
 export const Side = () => {
@@ -27,6 +28,7 @@ export const Side = () => {
     { label: 'experiencia', anchor: '#experience' },
     { label: 'sobre mí', anchor: '#about' },
     { label: 'contacto', anchor: 'mailto:juan.sanchez.dev@gmail.com' },
+    { label: 'CV', anchor: './CV_JhefersonCheca.pdf', newPage: true },
   ];
   const [selectedItem, setSelectedItem] = useState('#top');
 
@@ -69,7 +71,11 @@ export const Side = () => {
   };
 
   const handleSelectedItem = (item: NavItem) => {
-    window.location.href = item.anchor;
+    if (item.newPage) {
+      window.open(item.anchor, '_blank');
+    } else {
+      window.location.href = item.anchor;
+    }
   };
 
   return (
