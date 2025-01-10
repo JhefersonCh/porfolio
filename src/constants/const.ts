@@ -24,14 +24,7 @@ export const EXPERIENCES: JobExperience[] = [
     description:
       'Colaboré en el desarrollo de una aplicación web integral utilizando Angular para el frontend y NestJs para el backend, trabajando en equipo para la UNAB.',
   },
-  {
-    startDate: 'Enero 2024',
-    endDate: 'Julio 2024',
-    company: 'Kamila Innovation',
-    position: 'Desarrollador Trainee',
-    description:
-      'Contribuí a la implementación de soluciones innovadoras en una aplicación web con Angular para la alcaldía de Sibundoy (Ikaro), mejorando la accesibilidad y la interacción del usuario',
-  },
+
   {
     startDate: 'Mayo 2024',
     endDate: 'Junio 2024',
@@ -39,6 +32,14 @@ export const EXPERIENCES: JobExperience[] = [
     position: 'Desarrollador Wordpress',
     description:
       'Lideré el desarrollo de una aplicación web en Wordpress para Jhon Alarcón, enfocándome en la personalización y la optimización del rendimiento del sitio.',
+  },
+  {
+    startDate: 'Enero 2024',
+    endDate: 'Julio 2024',
+    company: 'Kamila Innovation',
+    position: 'Desarrollador Trainee',
+    description:
+      'Contribuí a la implementación de soluciones innovadoras en una aplicación web con Angular para la alcaldía de Sibundoy (Ikaro), mejorando la accesibilidad y la interacción del usuario',
   },
 ];
 
