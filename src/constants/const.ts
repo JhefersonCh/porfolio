@@ -1,39 +1,77 @@
+import Angular from '@/components/icons/Angular';
+import AngularMat from '@/components/icons/AngularMat';
+import Bootstrap from '@/components/icons/Bootstrap';
+import Express from '@/components/icons/Express';
+import Nest from '@/components/icons/Nest';
+import ReactIcon from '@/components/icons/React';
+import Tailwind from '@/components/icons/Tailwind';
 import type { JobExperience, Project } from '@/interfaces/interface';
 
 export const EXPERIENCES: JobExperience[] = [
   {
-    startDate: 'Enero 2022',
-    endDate: 'Presente',
-    company: 'TechCorp',
-    position: 'Desarrollador Senior',
+    startDate: 'Octubre 2024',
+    endDate: 'Diciembre 2024',
+    company: 'SouDev',
+    position: 'Desaarrollador Wordpress',
     description:
-      'Lidero un equipo de desarrollo en proyectos de software empresarial. Implementé prácticas de CI/CD que aumentaron la eficiencia del equipo en un 30%.',
+      'Desarrollador Wordpress Contribuí al desarrollo de una aplicación web en Wordpress para IMPULSA CONSTRUCTORA, optimizando la experiencia del usuario y mejorando la funcionalidad del sitio.',
   },
   {
-    startDate: 'Marzo 2020',
-    endDate: 'Diciembre 2021',
-    company: 'InnoSoft',
+    startDate: 'Agosto 2024',
+    endDate: 'Noviembre 2024',
+    company: 'SouDev',
     position: 'Desarrollador Full Stack',
     description:
-      'Desarrollé y mantuve aplicaciones web utilizando React y Node.js. Colaboré en la migración de una aplicación monolítica a una arquitectura de microservicios.',
+      'Colaboré en el desarrollo de una aplicación web integral utilizando Angular para el frontend y NestJs para el backend, trabajando en equipo para la UNAB.',
   },
   {
-    startDate: 'Junio 2018',
-    endDate: 'Febrero 2020',
-    company: 'WebSolutions',
-    position: 'Desarrollador Frontend Junior',
+    startDate: 'Enero 2024',
+    endDate: 'Julio 2024',
+    company: 'Kamila Innovation',
+    position: 'Desarrollador Trainee',
     description:
-      'Trabajé en el desarrollo de interfaces de usuario responsivas utilizando HTML, CSS y JavaScript. Participé en la implementación de un nuevo diseño de sistema que mejoró la experiencia del usuario.',
+      'Contribuí a la implementación de soluciones innovadoras en una aplicación web con Angular para la alcaldía de Sibundoy (Ikaro), mejorando la accesibilidad y la interacción del usuario',
   },
   {
-    startDate: 'Enero 2018',
-    endDate: 'Mayo 2018',
-    company: 'CodeAcademy',
-    position: 'Pasante de Desarrollo Web',
+    startDate: 'Mayo 2024',
+    endDate: 'Junio 2024',
+    company: 'SouDev',
+    position: 'Desarrollador Wordpress',
     description:
-      'Asistí en el desarrollo de pequeños proyectos web y aprendí las mejores prácticas de la industria. Participé en sesiones de revisión de código y mejoré mis habilidades de programación.',
+      'Lideré el desarrollo de una aplicación web en Wordpress para Jhon Alarcón, enfocándome en la personalización y la optimización del rendimiento del sitio.',
   },
 ];
+
+export const TAGS: Record<string, { name: string; icon: any }> = {
+  ANGULAR: {
+    name: 'ANGULAR',
+    icon: Angular,
+  },
+  NESTJS: {
+    name: 'NESTJS',
+    icon: Nest,
+  },
+  ANGULAR_MAT: {
+    name: 'ANGULAR MATERIAL',
+    icon: AngularMat,
+  },
+  BOOTSTRAP: {
+    name: 'BOOTSTRAP',
+    icon: Bootstrap,
+  },
+  REACT: {
+    name: 'REACT',
+    icon: ReactIcon,
+  },
+  EXPRESS: {
+    name: 'EXPRESS',
+    icon: Express,
+  },
+  TAILWIND: {
+    name: 'TAILWINDCSS',
+    icon: Tailwind,
+  },
+};
 
 export const PROJECTS: Project[] = [
   {
@@ -62,6 +100,7 @@ export const PROJECTS: Project[] = [
         alt: 'NotesHub4',
       },
     ],
+    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND],
   },
   {
     id: 2,
@@ -73,14 +112,19 @@ export const PROJECTS: Project[] = [
     github: 'https://www.github.com',
     gallery: [
       {
-        src: '/projects/projectzen.jpg',
-        alt: 'ProjectZen1',
+        src: '/projects/preunab.webp',
+        alt: 'preunab1',
+      },
+      {
+        src: '/projects/preunab.webp',
+        alt: 'preunab2',
       },
     ],
+    tags: [TAGS.ANGULAR, TAGS.NESTJS, TAGS.BOOTSTRAP],
   },
   {
     id: 3,
-    img: '/projects/projectzen.jpg',
+    img: '/projects/projectzen.webp',
     title: 'ProjectZen',
     description:
       'ProjectZen es un proyecto de gestión de tareas que permite a los usuarios crear, editar y eliminar tareas. También permite a los usuarios crear y editar proyectos, y asignar tareas a los miembros del equipo. ProjectZen nació como un proyecto universitario, fue desarrollado con Angular, NestJs, TypeOrm, Bootstrap y TypeScript durante aproximadamente 3 meses, y se desplegó en Netlify.',
@@ -88,10 +132,35 @@ export const PROJECTS: Project[] = [
     github: 'https://www.github.com',
     gallery: [
       {
-        src: '/projects/projectzen.jpg',
+        src: '/projects/projectzen.webp',
         alt: 'ProjectZen1',
       },
+      {
+        src: '/projects/projectzen2.webp',
+        alt: 'ProjectZen2',
+      },
+      {
+        src: '/projects/projectzen3.webp',
+        alt: 'ProjectZen3',
+      },
+      {
+        src: '/projects/projectzen4.webp',
+        alt: 'ProjectZen4',
+      },
+      {
+        src: '/projects/projectzen5.webp',
+        alt: 'ProjectZen5',
+      },
+      {
+        src: '/projects/projectzen6.webp',
+        alt: 'ProjectZen6',
+      },
+      {
+        src: '/projects/projectzen7.webp',
+        alt: 'ProjectZen7',
+      },
     ],
+    tags: [TAGS.ANGULAR, TAGS.NESTJS, TAGS.BOOTSTRAP],
   },
   {
     id: 4,
@@ -103,9 +172,10 @@ export const PROJECTS: Project[] = [
     github: 'https://www.github.com',
     gallery: [
       {
-        src: '/projects/projectzen.jpg',
-        alt: 'ProjectZen1',
+        src: '/projects/ikaro.webp',
+        alt: 'ikaro1',
       },
     ],
+    tags: [TAGS.ANGULAR, TAGS.NESTJS, TAGS.BOOTSTRAP],
   },
 ];

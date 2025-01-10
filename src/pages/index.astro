@@ -7,13 +7,17 @@ import Experience from '@/components/astro/Experience.astro';
 import '../assets/globals.css';
 import About from '@/components/astro/About.astro';
 import Tornado from '@/components/astro/Tornado.astro';
+import SocialPill from '@/components/astro/SocialPill.astro';
+import GitHubIcon from '@/components/icons/GitHub.astro';
+import LinkedInIcon from '@/components/icons/LinkedIn.astro';
+import Mail from '@/components/icons/Mail.astro';
 ---
 
 <Layout
   title="Portfolio de Jheferson Checa, desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
   description="Portfolio de Jheferson Checa,desarrollador web y estudiante de ingeniería de sistemas. Con experiencia en desarrollo web, diseño de interfaces y desarrollo de aplicaciones móviles, algunas aplicaciones de escritorio entre otras habilidades."
 >
-  <SectionContainer class="top mt-24">
+  <SectionContainer class="top mt-0 md:mt-24">
     <div class="flex flex-col items-center justify-center">
       <div
         class="flex justify-center items-center rounded-full size-44 my-6 md:my-0"
@@ -27,7 +31,7 @@ import Tornado from '@/components/astro/Tornado.astro';
       data-aos-duration="800"
       data-aos-anchor-placement="bottom-bottom"
     >
-      Hola, soy <span class="text-[#3034ff] dark:text-gray-400"
+      Hola, soy <span class="text-[#3034ff] dark:text-[#8a5fff]"
         >Jheferson Checa</span
       >
     </h1>
@@ -64,18 +68,21 @@ import Tornado from '@/components/astro/Tornado.astro';
       data-aos-delay="450"
       data-aos-anchor-placement="bottom-bottom"
     >
-      <button
-        class="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300"
-        onclick="window.location.href = '#projects'"
+      <nav
+        class="flex gap-x-4 flex-wrap gap-y-4 md:gap-y-0 justify-center md:justify-start"
       >
-        Proyectos
-      </button>
-      <button
-        class="dark:border-purple-600 border rounded flex items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white"
-        onclick="window.location.href = 'mailto:jheferson.checa@gmail.com'"
-      >
-        Contacto
-      </button>
+        <SocialPill
+          href="https://www.linkedin.com/in/jheferson-danni-checa-diaz-3386052a4/"
+        >
+          <LinkedInIcon class="size-7" />
+        </SocialPill>
+        <SocialPill href="mailto:jheferson.checa@gmail.com">
+          <Mail class="size-7" />
+        </SocialPill>
+        <SocialPill href="https://github.com/JhefersonCh">
+          <GitHubIcon class="size-7" />
+        </SocialPill>
+      </nav>
     </div>
   </SectionContainer>
 

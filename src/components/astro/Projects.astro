@@ -1,14 +1,15 @@
 ---
-import { ProjectCard } from '@/components/react/ProjectCard';
 import { PROJECTS } from '@/constants/const';
+import Angular from '../icons/Angular';
 import type { Project } from '@/interfaces/interface';
+import ProjectCard from '../react/ProjectCard';
 
 const projects: Project[] = PROJECTS;
 ---
 
 <article class="text-center flex flex-col gap-4 px-4 py-8">
   <h1
-    class="text-4xl font-semibold"
+    class="text-4xl font-semibold mb-8"
     data-aos="fade-up"
     data-aos-delay="150"
     data-aos-duration="800"
@@ -22,7 +23,7 @@ const projects: Project[] = PROJECTS;
     {
       projects.map((project) => (
         <div class="">
-          <ProjectCard client:load project={project} />
+          <ProjectCard client:load id={project.id} />
         </div>
       ))
     }
