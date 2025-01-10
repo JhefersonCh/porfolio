@@ -24,6 +24,8 @@ import { useEffect, useState } from 'react';
 import '../../assets/index.css';
 import PhotoSlider from './PhotoSlider';
 import { PROJECTS } from '@/constants/const';
+import World from '../icons/World';
+import GitHub from '../icons/GitHub';
 
 export function ProjectCard({ id }: { id: number }) {
   const [mounted, setMounted] = useState(false);
@@ -101,25 +103,29 @@ export function ProjectCard({ id }: { id: number }) {
             </div>
           </CardContent>
           <CardFooter className="justify-center">
-            <div className="flex flex-row gap-4">
+            <div className="flex justify-center gap-4 mt-6">
               <a
-                className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300"
+                className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300 flex flex-row gap-1"
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
-                Ver proyecto
+                <World />
+                Web
               </a>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="dark:border-purple-600 border rounded flex items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white"
-                onClick={(e) => e.stopPropagation()}
-              >
-                Ver código
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dark:border-purple-600 border rounded items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white flex flex-row gap-1"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <GitHub />
+                  Código
+                </a>
+              )}
             </div>
           </CardFooter>
         </Card>
@@ -146,23 +152,27 @@ export function ProjectCard({ id }: { id: number }) {
           </div>
           <div className="flex justify-center gap-4 mt-6">
             <a
-              className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300"
+              className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300 flex flex-row gap-1"
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
-              Ver proyecto
+              <World />
+              Web
             </a>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="dark:border-purple-600 border rounded flex items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white"
-              onClick={(e) => e.stopPropagation()}
-            >
-              Ver código
-            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="dark:border-purple-600 border rounded items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white flex flex-row gap-1"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <GitHub />
+                Código
+              </a>
+            )}
           </div>
         </div>
       </DialogContent>
