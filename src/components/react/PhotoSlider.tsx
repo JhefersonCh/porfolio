@@ -34,7 +34,7 @@ const PhotoSlider = ({
   }, [gallery]);
 
   return (
-    <div className="swiper w-full">
+    <div className="swiper w-full border rounded-xl">
       <div className="swiper-wrapper" id="my-slider">
         {gallery?.map(({ src, alt }, index) => (
           <a

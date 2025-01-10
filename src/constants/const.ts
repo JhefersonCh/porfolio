@@ -24,7 +24,6 @@ export const EXPERIENCES: JobExperience[] = [
     description:
       'Colaboré en el desarrollo de una aplicación web integral utilizando Angular para el frontend y NestJs para el backend, trabajando en equipo para la UNAB.',
   },
-
   {
     startDate: 'Mayo 2024',
     endDate: 'Junio 2024',
@@ -83,6 +82,8 @@ export const PROJECTS: Project[] = [
       'NotesHub es un proyecto para la gestión de notas personales, donde se pueden crear, editar y eliminar notas. Manejando el estado, prioridad, categorías y más características. \n\n NotesHub fue desarrollado con React, Express, Sequalize, Tailwind y JavaScript durante aproximadamente 3 semanas, para la Universidad, y se desplegó en Vercel.',
     link: 'https://www.google.com',
     github: 'https://www.github.com',
+    contribution:
+      'Realicé todo el desarrollo, tanto frontend como backend, este era un proyecto universitario, siendo el lider del equipo de desarrollo, tuve que enseñar y explicar el uso de ciertas tecnologías, como React, Express, Sequalize, Tailwind y JavaScript. \n Realicé la base de datos, desplegué el proyecto, tanto base de datos, backend y frontend, y realicé la documentación del proyecto.',
     gallery: [
       {
         src: '/projects/noteshub.webp',
@@ -111,6 +112,8 @@ export const PROJECTS: Project[] = [
       'PreUNAB es un proyecto universitario que permite a los estudiantes de la UNAB realizar sus ensayos, prácticas y otros. Los docentes de la UNAB pueden acceder a este proyecto para monitorear el avance de sus estudiantes.',
     link: 'https://www.google.com',
     github: 'https://www.github.com',
+    contribution:
+      'Me encargué primeramente del módulo de registro, procedí a realizar contribuciones en ciertos módulos privados tanto para el rol de administrador, superadministrador, estudiantes y docentes. \n Luego se me encargó el rol de fullstack, donde se me dió por tarea particionar la base de datos, realizar autorías de ciertas tablas en la misma, y realizar el módulo de preguntas frecuentes. \n Finalmente, se me entregó la mayor parte de la ciber seguridad, añadiendo rate limits, reCaptcha, autenticacion de rol por endpoints, entre otras funciones.',
     gallery: [
       {
         src: '/projects/preunab.webp',
@@ -131,6 +134,8 @@ export const PROJECTS: Project[] = [
       'ProjectZen es un proyecto de gestión de tareas que permite a los usuarios crear, editar y eliminar tareas. También permite a los usuarios crear y editar proyectos, y asignar tareas a los miembros del equipo. ProjectZen nació como un proyecto universitario, fue desarrollado con Angular, NestJs, TypeOrm, Bootstrap y TypeScript durante aproximadamente 3 meses, y se desplegó en Netlify.',
     link: 'https://www.google.com',
     github: 'https://www.github.com',
+    contribution:
+      'Me encargué de la mayoría del desarrollo, tanto frontend como backend, al ser un proyecto universitario, se me asignó el rol de Scrum Master y lideré el equipo de desarrollo. \n Realicé la base de datos, desplegué el proyecto, tanto base de datos, backend y frontend, y realicé la documentación del proyecto.',
     gallery: [
       {
         src: '/projects/projectzen.webp',
@@ -171,6 +176,8 @@ export const PROJECTS: Project[] = [
       'iKaro es un proyecto para la aclaldía de Sibundoy, implementada para el manejo de los documentos de contratación de la alcaldía.',
     link: 'https://www.google.com',
     github: 'https://www.github.com',
+    contribution:
+      'Como desarrollador trainee, en este proyecto aprendí a maquetar a niver de frontend, usar Angular, Bootstrap y otras tecnologías, primeramente se me encargó el módulo de inicio de sesión, luego se me encargó la administración de permisos por rol, procedí a realizar contribuciones en algunos módulos privados, manejo de contratación, proveedores de contratos, solicitantes, entre otros.\n Finalmente, me encargué de algunos de los reportes gráficos en el backend para la visualización de los avances en la contratación y otros aspectos.',
     gallery: [
       {
         src: '/projects/ikaro.webp',

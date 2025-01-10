@@ -18,4 +18,5 @@ export interface Project {
     alt: string;
   }[];
   tags: any[];
+  contribution?: string;
 }

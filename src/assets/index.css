@@ -51,4 +51,21 @@
 [role='dialog'] {
   width: 90% !important;
   border-radius: 10px;
+  padding-inline: 0px !important;
+}
+
+.with-scroll::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 8px;
+  border-radius: 8px;
+}
+
+.with-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
+.with-scroll::-webkit-scrollbar-track {
+  background: #00000000;
 }

@@ -20,7 +20,6 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 import { useEffect, useState } from 'react';
-import type { Project } from '@/interfaces/interface';
 
 import '../../assets/index.css';
 import PhotoSlider from './PhotoSlider';
@@ -126,14 +125,25 @@ export function ProjectCard({ id }: { id: number }) {
         </Card>
       </DialogTrigger>
       <DialogContent className="max-w-3xl">
-        <DialogHeader>
+        <DialogHeader className="px-5">
           <DialogTitle>{project.title}</DialogTitle>
-          <DialogDescription className="whitespace-pre-line">
+          <DialogDescription className="whitespace-pre-line text-start">
             {`\n${project.description}`}
           </DialogDescription>
         </DialogHeader>
         <div className="mt-4">
-          <PhotoSlider gallery={project.gallery} />
+          <div className="max-h-[200px] md:max-h-[300px] xl:max-h-max overflow-y-auto with-scroll pr-1 pl-5 mr-3">
+            <PhotoSlider gallery={project.gallery} />
+
+            <div className="my-5 ">
+              {project.contribution &&
+                project.contribution.split('\n').map((parrafo, index) => (
+                  <p key={index} className="mb-3">
+                    {parrafo.trim()}
+                  </p>
+                ))}
+            </div>
+          </div>
           <div className="flex justify-center gap-4 mt-6">
             <a
               className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300"
