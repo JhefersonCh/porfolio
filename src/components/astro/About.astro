@@ -4,7 +4,7 @@ import Tornado from './Tornado.astro';
 
 <article>
   <h1
-    class="text-4xl font-bold text-center text-purple-600 dark:text-purple-400 mb-12"
+    class="text-4xl font-bold text-center text-[#0c08ff] dark:text-purple-400 mb-12"
     data-aos="fade-up"
     data-aos-duration="800"
     data-aos-anchor-placement="bottom-bottom"
@@ -24,27 +24,56 @@ import Tornado from './Tornado.astro';
     </section>
 
     <section
-      class="col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8"
+      class="aos-text col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8"
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-anchor-placement="bottom-bottom"
+      data-aos-offset="-150"
     >
       <div class="w-full flex justify-center h-full items-center">
         <div class="text-pretty prose dark:prose-invert px-6">
           <p>
-            Hola, soy Jheferson, un entusiasta estudiante de desarrollo de
-            software que vive en Colombia. Actualmente, trabajo como
-            desarrollador, especializándome tanto en el desarrollo frontend como
-            en el backend.
+            Hola, soy <span class="font-semibold">Jheferson</span>, un
+            apasionado <span>desarrollador de software</span> de 24 años que vive
+            en <span class="font-semibold">Colombia</span>.
           </p>
+
           <p>
-            Me considero una persona curiosa y rápida para aprender, que
-            disfruta compartir conocimientos con los demás. Tengo un enfoque
-            algo perfeccionista en mi trabajo, lo que me motiva a dar lo mejor
-            en cada proyecto.
+            Con más de <span class="font-semibold">1 año de experiencia</span> en
+            el desarrollo frontend y backend, me especializo en crear soluciones
+            modernas, funcionales y escalables que impactan positivamente a los usuarios.
+          </p>
+
+          <p>
+            Soy una persona <span>curiosa</span> y con una rápida capacidad de aprendizaje,
+            lo que me permite adaptarme a nuevos desafíos y tecnologías con facilidad.
+            Además, disfruto compartir conocimientos y colaborar en equipo para alcanzar
+            los mejores resultados.
+          </p>
+
+          <p>
+            Mi enfoque perfeccionista en cada proyecto me motiva a entregar
+            trabajo de la más alta calidad, siempre buscando innovar y superar
+            expectativas.
           </p>
         </div>
       </div>
     </section>
   </div>
 </article>
+
+<script is:inline>
+  (function init() {
+    const adjustAnimationsForMobile = () => {
+      const isMobile = window.innerWidth < 768;
+      const items = document.querySelector('.aos-text');
+      if (isMobile) {
+        items.setAttribute('data-aos-offset', '-500');
+      } else {
+        items.setAttribute('data-aos-offset', '-100');
+      }
+    };
+    adjustAnimationsForMobile();
+    window.addEventListener('resize', adjustAnimationsForMobile);
+  })();
+</script>

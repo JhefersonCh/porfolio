@@ -71,6 +71,19 @@ export function ProjectCard({ id }: { id: number }) {
     );
   };
 
+  const whiteSpace = (text: string) => {
+    const paragraphs = text.split('\n');
+    const newText = paragraphs.map((paragraph, index) => {
+      return (
+        <span key={index} className="mb-3 block text-sm text-muted-foreground">
+          {`${paragraph.trim()} `}
+        </span>
+      );
+    });
+
+    return newText;
+  };
+
   if (!project || !mounted) return null;
 
   return (
@@ -83,6 +96,29 @@ export function ProjectCard({ id }: { id: number }) {
           className="cursor-pointer transition-all duration-300 hover:shadow-lg"
         >
           <CardHeader>
+            <button className="absolute top-2 right-2 hover:scale-110 transition-all duration-300 rounded-full hover:bg-white/10 p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M16 4l4 0l0 4" />
+                <path d="M14 10l6 -6" />
+                <path d="M8 20l-4 0l0 -4" />
+                <path d="M4 20l6 -6" />
+                <path d="M16 20l4 0l0 -4" />
+                <path d="M14 14l6 6" />
+                <path d="M8 4l-4 0l0 4" />
+                <path d="M4 4l6 6" />
+              </svg>
+            </button>
             <CardTitle>{project.title}</CardTitle>
             <CardDescription>
               {truncateString(project.description, 60)}
@@ -133,21 +169,20 @@ export function ProjectCard({ id }: { id: number }) {
       <DialogContent className="max-w-3xl">
         <DialogHeader className="px-5">
           <DialogTitle>{project.title}</DialogTitle>
-          <DialogDescription className="whitespace-pre-line text-start">
-            {`\n${project.description}`}
+          <DialogDescription className="text-start pt-2">
+            {project.description && whiteSpace(project.description)}
           </DialogDescription>
         </DialogHeader>
         <div className="mt-4">
+          <ul className="flex gap-2 flex-wrap justify-center mb-5">
+            {project.tags &&
+              project.tags.map((tag, index) => renderTag(tag, index))}
+          </ul>
           <div className="max-h-[200px] md:max-h-[300px] xl:max-h-max overflow-y-auto with-scroll pr-1 pl-5 mr-3">
             <PhotoSlider gallery={project.gallery} />
 
             <div className="my-5 ">
-              {project.contribution &&
-                project.contribution.split('\n').map((parrafo, index) => (
-                  <p key={index} className="mb-3">
-                    {parrafo.trim()}
-                  </p>
-                ))}
+              {project.contribution && whiteSpace(project.contribution)}
             </div>
           </div>
           <div className="flex justify-center gap-4 mt-6">

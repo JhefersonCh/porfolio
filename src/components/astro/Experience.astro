@@ -8,7 +8,7 @@ const experiences: JobExperience[] = EXPERIENCES;
 
 <div>
   <h1
-    class="text-4xl text-center text-purple-600 dark:text-purple-400 font-bold mb-10"
+    class="text-4xl text-center text-[#0c08ff] dark:text-purple-400 font-bold mb-10"
     data-aos="fade-up"
     data-aos-duration="800"
     data-aos-anchor-placement="bottom-bottom"
@@ -18,7 +18,7 @@ const experiences: JobExperience[] = EXPERIENCES;
   <div class="container mx-auto py-8">
     <div class="relative wrap h-full flex flex-col gap-8">
       <div
-        class="border-2-2 absolute mb-8 border-opacity-20 dark:border-gray-500 border-gray-700 h-full border md:left-1/2 left-[15px]"
+        class="line border-2-2 absolute mb-8 border-opacity-20 dark:border-gray-500 border-gray-700 h-full border md:left-1/2 left-[15px]"
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-anchor-placement="bottom-bottom"
@@ -38,6 +38,7 @@ const experiences: JobExperience[] = EXPERIENCES;
     const adjustAnimationsForMobile = () => {
       const isMobile = window.innerWidth < 768;
       const items = document.querySelectorAll('.data-aos');
+      const line = document.querySelector('.line');
 
       items.forEach((item, index) => {
         if (isMobile) {
@@ -47,6 +48,12 @@ const experiences: JobExperience[] = EXPERIENCES;
           item.setAttribute('data-aos', direction);
         }
       });
+
+      if (line && isMobile) {
+        line.setAttribute('data-aos-offset', '-1000');
+      } else {
+        line.setAttribute('data-aos-offset', '-700');
+      }
     };
 
     adjustAnimationsForMobile();
