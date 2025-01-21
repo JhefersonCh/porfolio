@@ -133,7 +133,7 @@ export const PROJECTS: Project[] = [
     img: '/projects/ikaro.webp',
     title: 'iKARO',
     description:
-      'iKARO es un sistema para la alcaldía de Sibundoy, diseñado para gestionar documentos relacionados con la contratación pública.\n',
+      'iKARO es un sistema para gestionar documentos relacionados con la contratación pública y todo lo que conlleva este proceso.\n',
     link: 'https://clm.test.kamilainnovation.co/',
     contribution:
       'Desarrollé interfaces de usuario utilizando Angular y Bootstrap, enfocándome en la maquetación y experiencia del usuario.\nParticipé en la implementación del módulo de inicio de sesión, gestionando permisos por roles y contribuyendo al desarrollo de varios módulos privados relacionados con contrataciones y proveedores.\nAdemás, diseñé y generé reportes gráficos en el backend para la visualización de datos clave sobre procesos de contratación, optimizando la toma de decisiones basada en datos.',
