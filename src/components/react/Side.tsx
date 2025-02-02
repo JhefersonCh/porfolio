@@ -27,7 +27,7 @@ export const Side = () => {
     { label: 'proyectos', anchor: '#projects' },
     { label: 'experiencia', anchor: '#experience' },
     { label: 'sobre mí', anchor: '#about' },
-    { label: 'contacto', anchor: 'mailto:juan.sanchez.dev@gmail.com' },
+    { label: 'contacto', anchor: 'mailto:jheferson.checa@gmail.com' },
     { label: 'CV', anchor: './CV_JhefersonCheca.pdf', newPage: true },
   ];
   const [selectedItem, setSelectedItem] = useState('#top');

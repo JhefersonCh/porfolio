@@ -178,7 +178,7 @@ export function ProjectCard({ id }: { id: number }) {
             {project.tags &&
               project.tags.map((tag, index) => renderTag(tag, index))}
           </ul>
-          <div className="max-h-[200px] md:max-h-[300px] xl:max-h-max overflow-y-auto with-scroll pr-1 pl-5 mr-3">
+          <div className="max-h-[200px] md:max-h-[300px] xl:max-h-[50vh] overflow-y-auto with-scrollbar pr-1 pl-5 mr-3">
             <PhotoSlider gallery={project.gallery} />
 
             <div className="my-5 ">

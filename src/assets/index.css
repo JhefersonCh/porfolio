@@ -54,6 +54,17 @@
   padding-inline: 0px !important;
 }
 
+.with-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 8px;
+  border-radius: 8px;
+}
+.with-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
 .with-scroll::-webkit-scrollbar {
   display: block;
   width: 6px;
