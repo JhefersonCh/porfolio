@@ -89,82 +89,84 @@ export function ProjectCard({ id }: { id: number }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card
+        <div
           data-aos="zoom-in"
           data-aos-duration="800"
           data-aos-offset="200"
-          className="cursor-pointer transition-all duration-300 hover:shadow-lg"
+          className="p-[2px] animated-border rounded-lg bg-[linear-gradient(315deg,transparent_40%,black_50%,transparent_60%)] dark:bg-[linear-gradient(315deg,transparent_40%,blue_50%,transparent_60%)]"
         >
-          <CardHeader>
-            <button className="absolute top-2 right-2 hover:scale-110 transition-all duration-300 rounded-full hover:bg-white/10 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M16 4l4 0l0 4" />
-                <path d="M14 10l6 -6" />
-                <path d="M8 20l-4 0l0 -4" />
-                <path d="M4 20l6 -6" />
-                <path d="M16 20l4 0l0 -4" />
-                <path d="M14 14l6 6" />
-                <path d="M8 4l-4 0l0 4" />
-                <path d="M4 4l6 6" />
-              </svg>
-            </button>
-            <CardTitle>{project.title}</CardTitle>
-            <CardDescription>
-              {truncateString(project.description, 60)}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="flex gap-2 flex-wrap justify-center mb-5">
-              {project.tags &&
-                project.tags.map((tag, index) => renderTag(tag, index))}
-            </ul>
-            <div className="overflow-hidden animate-vibration rounded-lg">
-              <img
-                className="w-full h-64 object-cover rounded-lg scale-105 hover:scale-100 transition-all duration-500"
-                src={project.img}
-                alt={project.title}
-                loading="lazy"
-              />
-            </div>
-          </CardContent>
-          <CardFooter className="justify-center">
-            <div className="flex justify-center gap-4 mt-6">
-              <a
-                className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300 flex flex-row gap-1"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <World />
-                Web
-              </a>
-              {project.github && (
+          <Card className="cursor-pointer transition-all duration-300 hover:shadow-lg ">
+            <CardHeader>
+              <button className="absolute top-2 right-2 hover:scale-110 transition-all duration-300 rounded-full hover:bg-white/10 p-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M16 4l4 0l0 4" />
+                  <path d="M14 10l6 -6" />
+                  <path d="M8 20l-4 0l0 -4" />
+                  <path d="M4 20l6 -6" />
+                  <path d="M16 20l4 0l0 -4" />
+                  <path d="M14 14l6 6" />
+                  <path d="M8 4l-4 0l0 4" />
+                  <path d="M4 4l6 6" />
+                </svg>
+              </button>
+              <CardTitle>{project.title}</CardTitle>
+              <CardDescription>
+                {truncateString(project.description, 60)}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="flex gap-2 flex-wrap justify-center mb-5">
+                {project.tags &&
+                  project.tags.map((tag, index) => renderTag(tag, index))}
+              </ul>
+              <div className="overflow-hidden animate-vibration rounded-lg">
+                <img
+                  className="w-full h-64 object-cover rounded-lg scale-105 hover:scale-100 transition-all duration-500"
+                  src={project.img}
+                  alt={project.title}
+                  loading="lazy"
+                />
+              </div>
+            </CardContent>
+            <CardFooter className="justify-center">
+              <div className="flex justify-center gap-4 mt-6">
                 <a
-                  href={project.github}
+                  className="bg-[#3034ff] hover:bg-blue-800 hover:scale-105 font-medium py-2 px-4 rounded text-white transition-all duration-300 flex flex-row gap-1"
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="dark:border-purple-600 border rounded items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white flex flex-row gap-1"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <GitHub />
-                  Código
+                  <World />
+                  Web
                 </a>
-              )}
-            </div>
-          </CardFooter>
-        </Card>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="dark:border-purple-600 border rounded items-center font-medium px-4 py-2 dark:hover:bg-purple-600 transition-all dark:text-white duration-300 hover:scale-105 border-black/50 text-black hover:bg-black/50 hover:text-white flex flex-row gap-1"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <GitHub />
+                    Código
+                  </a>
+                )}
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
       </DialogTrigger>
       <DialogContent className="max-w-3xl">
         <DialogHeader className="px-5">

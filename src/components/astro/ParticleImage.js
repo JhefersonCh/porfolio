@@ -72,6 +72,11 @@ export class ParticleImage {
     canvas.height = this.height;
 
     ctx.drawImage(image, 0, 0, this.width, this.height);
+    ctx.save();
+    ctx.beginPath();
+    ctx.clip();
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
     return ctx.getImageData(0, 0, this.width, this.height);
   }
 
