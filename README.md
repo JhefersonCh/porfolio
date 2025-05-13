@@ -1,48 +1,23 @@
-# Astro Starter Kit: Basics
+# 🧑‍💻 Jheff - Portafolio Web
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Hola! Soy **Jheff**, un desarrollador **Full Stack** de 24 años apasionado por construir soluciones que combinan funcionalidad con una experiencia de usuario de calidad. Actualmente resido en **Mocoa, Putumayo** y me destaco por ser una persona **proactiva, resolutiva y siempre lista para asumir nuevos retos**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 📂 Contenido del portafolio
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este portafolio incluye algunos de los proyectos que he desarrollado, con enfoque en buenas prácticas, rendimiento y escalabilidad. Cada uno cuenta con su propia descripción, tecnologías utilizadas y, si es posible, un enlace para verlo en acción o revisar el código fuente.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Este portafolio fue desarrollado utilizando:
 
-## 🚀 Project Structure
+- **[Astro](https://astro.build/)**: Framework moderno orientado al rendimiento y la simplicidad.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de estilos utilitario para construir interfaces modernas y responsivas.
+- **[WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)**: Para renderizar contenido gráfico interactivo en 3D directamente en el navegador.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🌐 ¿Dónde encontrarme?
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- 💼 [LinkedIn](https://www.linkedin.com/in/jheferson-danni-checa-diaz-3386052a4/)
+- 💻 [GitHub](https://github.com/JhefersonCh)
+- 📫 Contacto: jheferson.checa@gmail.com
+  
+## 🔗 Portafolio en línea
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Puedes ver el portafolio en vivo aquí: [https://jheferson.netlify.app/](https://jheferson.netlify.app/)
