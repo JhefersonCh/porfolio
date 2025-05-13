@@ -27,6 +27,6 @@ Este portafolio incluye algunos de los proyectos que he desarrollado, con enfoqu
 
 ## 🌐 ¿Dónde encontrarme?
 
-- 💼 [LinkedIn]([https://www.linkedin.com/in/tu-linkedin](https://www.linkedin.com/in/jheferson-danni-checa-diaz-3386052a4/))
-- 💻 [GitHub]([https://github.com/tu-github](https://github.com/JhefersonCh))
+- 💼 [LinkedIn](https://www.linkedin.com/in/tu-linkedin](https://www.linkedin.com/in/jheferson-danni-checa-diaz-3386052a4/)
+- 💻 [GitHub](https://github.com/tu-github](https://github.com/JhefersonCh)
 - 📫 Contacto: jheferson.checa@gmail.com
